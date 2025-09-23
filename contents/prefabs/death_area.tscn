@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2erhnolprkba"]
+
+[ext_resource type="Material" uid="uid://b08ea8bidgh51" path="res://contents/materials/material_death_area.tres" id="1_2idit"]
+[ext_resource type="Script" uid="uid://dwgsj75g87g63" path="res://scripts/death_area.gd" id="1_5ud2c"]
+[ext_resource type="Script" uid="uid://lj4xky6pr276" path="res://scripts/editor/editor_death_area.gd" id="2_ft84o"]
+[ext_resource type="Shape3D" uid="uid://du78dwu0qagyi" path="res://contents/death_collision.tres" id="2_ln5lp"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5sfuv"]
+
+[node name="DeathArea" type="Area3D" node_paths=PackedStringArray("model_3d")]
+script = ExtResource("1_5ud2c")
+model_3d = NodePath("MeshInstance3D")
+
+[node name="Node" type="Node" parent="." node_paths=PackedStringArray("death_area", "collision_shape")]
+script = ExtResource("2_ft84o")
+death_area = NodePath("..")
+collision_shape = NodePath("../CollisionShape3D")
+box_shape = ExtResource("2_ln5lp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = ExtResource("2_ln5lp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+material_override = ExtResource("1_2idit")
+mesh = SubResource("BoxMesh_5sfuv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="player_death" from="." to="." method="_on_player_death"]
