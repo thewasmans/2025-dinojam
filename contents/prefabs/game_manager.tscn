@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cecleonog2yh0"]
+
+[ext_resource type="Script" uid="uid://b6oclbh8yguum" path="res://scripts/game_manager.gd" id="1_fbeg4"]
+[ext_resource type="PackedScene" uid="uid://ccrc7jg37fxou" path="res://contents/prefabs/ui/ui_menu_death.tscn" id="2_djqmw"]
+
+[node name="GameManager" type="Node"]
+script = ExtResource("1_fbeg4")
+game_ui_death_prefab = ExtResource("2_djqmw")
