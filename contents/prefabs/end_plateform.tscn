@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dq8gmo5mfxfh"]
+
+[ext_resource type="Script" uid="uid://bb1ykjn1i14vl" path="res://scripts/editor/end_plateform.gd" id="1_vcdlw"]
+[ext_resource type="Material" uid="uid://bfcgbb7gsb4gd" path="res://contents/materials/material_end_plateform.tres" id="2_vrn87"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vu7ml"]
+size = Vector3(3, 1, 0.25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vrn87"]
+
+[node name="EndPlateform" type="Area3D" node_paths=PackedStringArray("mesh")]
+script = ExtResource("1_vcdlw")
+mesh = NodePath("MeshInstance3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_vu7ml")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0, 0)
+material_override = ExtResource("2_vrn87")
+mesh = SubResource("BoxMesh_vrn87")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
