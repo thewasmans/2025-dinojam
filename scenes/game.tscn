@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://cldisfq822ewp"]
+
+[ext_resource type="PackedScene" uid="uid://ds25afo5ad7we" path="res://contents/prefabs/player_character.tscn" id="1_uwrxv"]
+[ext_resource type="Environment" uid="uid://co8c3kh3eg1uq" path="res://contents/environments/default_environment.tres" id="2_yqjtg"]
+
+[node name="Game" type="Node3D"]
+
+[node name="Global" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Global"]
+transform = Transform3D(-0.4882405, 0.35448962, -0.79747, 1.4901163e-08, 0.91378665, 0.40619448, 0.87270916, 0.19832058, -0.44614765, -3.7717578, 3.5754862, -0.21189451)
+
+[node name="PlayerCharacter" parent="Global" instance=ExtResource("1_uwrxv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37816226, -1.1920929e-07, -0.24619555)
+
+[node name="Level" type="Node3D" parent="."]
+
+[node name="Lighting" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(0.5870366, 0.5042064, -0.6333749, -2.9802322e-08, 0.7823691, 0.6228151, 0.80956036, -0.36561525, 0.45927927, -60.95676, 67.673546, 57.554764)
+shadow_enabled = true
+
+[node name="Environment" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
+environment = ExtResource("2_yqjtg")
