@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://ds25afo5ad7we"]
+
+[ext_resource type="Script" uid="uid://mbxaiqxfq3b7" path="res://scripts/player_character.gd" id="1_eu4ru"]
+[ext_resource type="Material" uid="uid://dclwmhptv5bpc" path="res://contents/materials/material_black.tres" id="2_uvi63"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eu4ru"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_eu4ru"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_eu4ru"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_eu4ru"]
+
+[node name="PlayerCharacter" type="CharacterBody3D"]
+script = ExtResource("1_eu4ru")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_eu4ru")
+
+[node name="Model" type="Node3D" parent="."]
+
+[node name="Head" type="MeshInstance3D" parent="Model"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+mesh = SubResource("SphereMesh_eu4ru")
+skeleton = NodePath("../..")
+
+[node name="Body" type="MeshInstance3D" parent="Model"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_eu4ru")
+skeleton = NodePath("../..")
+
+[node name="Eye" type="MeshInstance3D" parent="Model"]
+transform = Transform3D(0.5, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 2.182569, 0.43416917)
+material_override = ExtResource("2_uvi63")
+mesh = SubResource("BoxMesh_eu4ru")
+skeleton = NodePath("../..")
