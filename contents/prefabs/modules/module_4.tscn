@@ -8,7 +8,37 @@
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.5747438e-09, 1, 0.08177996)
 
 [node name="BlockGround3" parent="." instance=ExtResource("1_qehqn")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.1054274e-15, 2.8196793, 0)
+transform = Transform3D(-4.1181966e-08, 1.4653711e-08, -1, 0.33523783, 0.94213355, 0, 0.94213355, -0.33523783, -4.371139e-08, -7.1054274e-15, 2.8196793, 0)
+
+[node name="BlockGround4" parent="." instance=ExtResource("1_qehqn")]
+transform = Transform3D(-3.5458974e-08, 2.5560649e-08, -1, 0.5847595, 0.8112067, 0, 0.8112067, -0.5847595, -4.371139e-08, 1.8492354e-08, 3.745715, -0.42305592)
+
+[node name="BlockGround7" parent="." instance=ExtResource("1_qehqn")]
+transform = Transform3D(-3.5458974e-08, 2.5560649e-08, -1, 0.5847595, 0.8112067, 0, 0.8112067, -0.5847595, -4.371139e-08, 4.012706e-08, 4.4323254, -0.9180002)
+
+[node name="BlockGround13" parent="." instance=ExtResource("1_qehqn")]
+transform = Transform3D(-2.4653302e-08, 3.609571e-08, -1, 0.82577354, 0.5640018, 0, 0.5640018, -0.82577354, -4.371139e-08, 8.563282e-08, 5.427371, -2.255681)
+
+[node name="BlockGround17" parent="." instance=ExtResource("1_qehqn")]
+transform = Transform3D(1.31089966e-08, 8.643435e-08, -1, 1.9773873, -0.29989892, -9.717956e-16, -0.29989892, -1.9773873, -4.371139e-08, 7.176e-08, 5.169476, -1.3320467)
+
+[node name="BlockGround18" parent="." instance=ExtResource("1_qehqn")]
+transform = Transform3D(-2.5803518e-08, 8.3527965e-08, -1, 1.9108969, 0.59031564, 0, 0.59031564, -1.9108969, -4.371139e-08, 7.176e-08, 4.1847386, -0.55686736)
+
+[node name="BlockGround19" parent="." instance=ExtResource("1_qehqn")]
+transform = Transform3D(-5.435626e-08, 6.846999e-08, -1, 1.5664105, 1.2435262, 0, 1.2435262, -1.5664105, -4.371139e-08, 7.176e-08, 2.9964733, 0.16857791)
+
+[node name="BlockGround20" parent="." instance=ExtResource("1_qehqn")]
+transform = Transform3D(-5.4356263e-08, 6.846999e-08, -1, 0.57712764, 1.9149212, 2.4936032e-08, 1.9149212, -0.57712764, -3.590097e-08, 7.176e-08, 1.1981916, 0.39152908)
+
+[node name="BlockGround15" parent="." instance=ExtResource("1_qehqn")]
+transform = Transform3D(-2.4653302e-08, 3.609571e-08, -1, 0.82577354, 0.5640018, 0, 0.5640018, -0.82577354, -4.371139e-08, 1.2127838e-07, 5.984339, -3.0711563)
+
+[node name="BlockGround16" parent="." instance=ExtResource("1_qehqn")]
+transform = Transform3D(-2.4653302e-08, 3.609571e-08, -1, 0.82577354, 0.5640018, 0, 0.5640018, -0.82577354, -4.371139e-08, 1.5195921e-07, 6.4637327, -3.773052)
+
+[node name="BlockGround14" parent="." instance=ExtResource("1_qehqn")]
+transform = Transform3D(-2.4653302e-08, 3.609571e-08, -1, 0.82577354, 0.5640018, 0, 0.5640018, -0.82577354, -4.371139e-08, 5.7754995e-08, 4.991775, -1.6179107)
 
 [node name="BlockGround5" parent="." instance=ExtResource("1_qehqn")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.3711367e-08, -1, -1)
@@ -19,8 +49,14 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.8
 [node name="BlockGround6" parent="." instance=ExtResource("1_qehqn")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.3393645e-09, 2, 0.12215042)
 
-[node name="BlockGround7" parent="." instance=ExtResource("1_qehqn")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.3711367e-08, 3, -1)
-
 [node name="BlockGround8" parent="." instance=ExtResource("1_qehqn")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.842171e-14, 0, 0)
+
+[node name="BlockGround10" parent="." instance=ExtResource("1_qehqn")]
+transform = Transform3D(-2.5950829e-08, 3.5174423e-08, -1, 0.804697, 0.59368575, 0, 0.59368575, -0.804697, -4.371139e-08, 2.1587814e-08, -0.29272747, -0.49387228)
+
+[node name="BlockGround12" parent="." instance=ExtResource("1_qehqn")]
+transform = Transform3D(-2.5950829e-08, 3.5174423e-08, -1, 0.804697, 0.59368575, 0, 0.59368575, -0.804697, -4.371139e-08, 3.317773e-08, -0.6521137, -0.75901866)
+
+[node name="BlockGround11" parent="." instance=ExtResource("1_qehqn")]
+transform = Transform3D(-1.4924364e-08, 4.1084654e-08, -1, 0.9399073, 0.34142962, 0, 0.34142962, -0.9399073, -4.371139e-08, 5.492006e-09, 0.50415105, -0.1256432)

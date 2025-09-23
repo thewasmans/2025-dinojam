@@ -51,7 +51,7 @@ shadow_mesh = SubResource("ArrayMesh_66u4u")
 [node name="Global" type="Node3D" parent="."]
 
 [node name="PlayerCharacter" parent="Global" instance=ExtResource("1_uwrxv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.159, 7.143)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.159, -1.472)
 
 [node name="Camera3D" type="Camera3D" parent="Global/PlayerCharacter"]
 transform = Transform3D(-4.371139e-08, 0.40673664, -0.9135454, 0, 0.9135454, 0.40673664, 1, 1.7779023e-08, -3.993234e-08, -6.187, 3.04, 0)
@@ -72,44 +72,65 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
 [node name="Module2" parent="Level" instance=ExtResource("3_lnu2h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
 
+[node name="Module13" parent="Level" instance=ExtResource("3_lnu2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
+
+[node name="Module14" parent="Level" instance=ExtResource("3_lnu2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
+
+[node name="Module15" parent="Level" instance=ExtResource("3_lnu2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
+
+[node name="Module17" parent="Level" instance=ExtResource("3_lnu2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
+
+[node name="Module18" parent="Level" instance=ExtResource("3_lnu2h")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 1.0000002, 25)
+
+[node name="Module12" parent="Level" instance=ExtResource("3_lnu2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 25)
+
+[node name="Module19" parent="Level" instance=ExtResource("3_lnu2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 34)
+
 [node name="Module5" parent="Level" instance=ExtResource("3_lnu2h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40)
 
 [node name="Module8" parent="Level" instance=ExtResource("3_lnu2h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 44)
 
 [node name="Module9" parent="Level" instance=ExtResource("3_lnu2h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 22)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
 
 [node name="Module3" parent="Level" instance=ExtResource("4_iywne")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 51)
 
 [node name="Module4" parent="Level" instance=ExtResource("5_p57ef")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 20)
+
+[node name="Module11" parent="Level" instance=ExtResource("5_p57ef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 29)
+
+[node name="Module16" parent="Level" instance=ExtResource("5_p57ef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 34)
 
 [node name="Module10" parent="Level" instance=ExtResource("6_dinhu")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8.742278e-08, 1, -10)
 
-[node name="DeathArea" parent="Level" instance=ExtResource("5_gee14")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 5.529437)
-scale_area = Vector3(1, 1, 59.35)
-debug = true
-
 [node name="CreatureDino" parent="Level" instance=ExtResource("4_kvpfn")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.19223076, 0.41534233, 16.64544)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.19222838, 0.41534233, 43.876144)
 speed = -1.0
 
-[node name="EndPlateform" parent="Level" instance=ExtResource("8_kvpfn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4335855e-05, 1, 10.243646)
-
-[node name="EndPlateform2" parent="Level" instance=ExtResource("8_kvpfn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4335855e-05, 1, -9.2567215)
-
 [node name="EndPlateform3" parent="Level" instance=ExtResource("8_kvpfn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4335855e-05, 1, 13.778401)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4335855e-05, 1, 39.7784)
 
 [node name="EndPlateform4" parent="Level" instance=ExtResource("8_kvpfn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4335855e-05, 1, 27.222658)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4335855e-05, 1, 53.222656)
+
+[node name="DeathArea" parent="Level" instance=ExtResource("5_gee14")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 24.529438)
+scale_area = Vector3(1, 1, 100)
+debug = true
 
 [node name="Lighting" type="Node3D" parent="."]
 
