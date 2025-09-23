@@ -1,17 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://cldisfq822ewp"]
+[gd_scene load_steps=4 format=3 uid="uid://cldisfq822ewp"]
 
 [ext_resource type="PackedScene" uid="uid://ds25afo5ad7we" path="res://contents/prefabs/player_character.tscn" id="1_uwrxv"]
 [ext_resource type="Environment" uid="uid://co8c3kh3eg1uq" path="res://contents/environments/default_environment.tres" id="2_yqjtg"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_yqjtg"]
+size = Vector2(2, 10)
 
 [node name="Game" type="Node3D"]
 
 [node name="Global" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="Global"]
-transform = Transform3D(-0.4882405, 0.35448962, -0.79747, 1.4901163e-08, 0.91378665, 0.40619448, 0.87270916, 0.19832058, -0.44614765, -3.7717578, 3.5754862, -0.21189451)
+transform = Transform3D(-4.371139e-08, 0.40673664, -0.9135454, 0, 0.9135454, 0.40673664, 1, 1.7779023e-08, -3.993234e-08, -3.707, 3.71, 3.343)
 
 [node name="PlayerCharacter" parent="Global" instance=ExtResource("1_uwrxv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37816226, -1.1920929e-07, -0.24619555)
 
 [node name="Level" type="Node3D" parent="."]
 
@@ -22,6 +24,11 @@ transform = Transform3D(0.5870366, 0.5042064, -0.6333749, -2.9802322e-08, 0.7823
 shadow_enabled = true
 
 [node name="Environment" type="Node3D" parent="."]
+
+[node name="Ground" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+mesh = SubResource("PlaneMesh_yqjtg")
+skeleton = NodePath("../..")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
 environment = ExtResource("2_yqjtg")
