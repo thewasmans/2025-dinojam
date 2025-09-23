@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhlpsk7oikd7y"]
+
+[ext_resource type="PackedScene" uid="uid://4mq03rq07m1e" path="res://contents/prefabs/block_ground.tscn" id="1_x4ydm"]
+
+[node name="Module1" type="Node3D"]
+
+[node name="BlockGround2" parent="." instance=ExtResource("1_x4ydm")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.371139e-08, 0, 1)
+
+[node name="BlockGround3" parent="." instance=ExtResource("1_x4ydm")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.742278e-08, 0, 2)
+
+[node name="BlockGround5" parent="." instance=ExtResource("1_x4ydm")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.1855695e-07, -1, 5)
+
+[node name="BlockGround9" parent="." instance=ExtResource("1_x4ydm")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.6226834e-07, -1, 6)
+
+[node name="BlockGround6" parent="." instance=ExtResource("1_x4ydm")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -1, 0)
+
+[node name="BlockGround7" parent="." instance=ExtResource("1_x4ydm")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.371139e-08, -1, 1)
+
+[node name="BlockGround8" parent="." instance=ExtResource("1_x4ydm")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.1855695e-07, 0, 5)
