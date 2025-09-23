@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bm411dicxfoyw"]
 
-[ext_resource type="PackedScene" uid="uid://4mq03rq07m1e" path="res://contents/prefabs/block_ground.tscn" id="1_4u2vi"]
+[ext_resource type="PackedScene" uid="uid://4mq03rq07m1e" path="res://contents/prefabs/modules/block_ground.tscn" id="1_4u2vi"]
 
 [node name="Module1" type="Node3D"]
 
