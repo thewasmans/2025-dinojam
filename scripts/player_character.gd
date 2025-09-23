@@ -1,3 +1,4 @@
+class_name PlayerCharacter 
 extends CharacterBody3D
 
 @export var speed:float = 10
@@ -15,6 +16,7 @@ func apply_velocity_from_input()->void:
 		
 	var direction:float = Input.get_axis("backward", "forward")
 	velocity.z = direction * speed
+	position.x = 0
 
 func _physics_process(delta:float)->void:
 	apply_gravity(delta)
