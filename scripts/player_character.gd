@@ -4,6 +4,7 @@ extends CharacterBody3D
 @export var speed:float = 10
 @export var jump_speed:float = 20.0
 @export var jump_speed_decrease:float = .1
+@export var mesh:Node3D
 
 var _gravity:float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -16,6 +17,9 @@ func apply_velocity_from_input()->void:
 		
 	var direction:float = Input.get_axis("backward", "forward")
 	velocity.z = direction * speed
+	
+	if direction != 0:
+		mesh.rotation = Vector3(0, PI/2 + -direction * PI/2,0)
 	position.x = 0
 
 func _physics_process(delta:float)->void:

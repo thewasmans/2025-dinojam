@@ -11,8 +11,10 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_eu4ru"]
 
-[node name="PlayerCharacter" type="CharacterBody3D"]
+[node name="PlayerCharacter" type="CharacterBody3D" node_paths=PackedStringArray("mesh")]
 script = ExtResource("1_eu4ru")
+jump_speed = 30.0
+mesh = NodePath("Model")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
