@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=4 uid="uid://cldisfq822ewp"]
+[gd_scene load_steps=12 format=4 uid="uid://cldisfq822ewp"]
 
 [ext_resource type="PackedScene" uid="uid://ds25afo5ad7we" path="res://contents/prefabs/player_character.tscn" id="1_uwrxv"]
 [ext_resource type="Environment" uid="uid://co8c3kh3eg1uq" path="res://contents/environments/default_environment.tres" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dtvr13n5ht3tp" path="res://contents/prefabs/module_1.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://bhlpsk7oikd7y" path="res://contents/prefabs/module_3.tscn" id="4_iywne"]
+[ext_resource type="PackedScene" uid="uid://d2erhnolprkba" path="res://contents/prefabs/death_area.tscn" id="5_gee14"]
 [ext_resource type="PackedScene" uid="uid://bm411dicxfoyw" path="res://contents/prefabs/module_2.tscn" id="5_p57ef"]
 [ext_resource type="PackedScene" uid="uid://cx05w6qokm76s" path="res://contents/model3d/geo_cliff.glb" id="5_u5sy4"]
 [ext_resource type="Material" uid="uid://c7sym6kjk8cft" path="res://contents/materials/material_gray.tres" id="7_u5sy4"]
@@ -46,7 +47,7 @@ shadow_mesh = SubResource("ArrayMesh_66u4u")
 [node name="Global" type="Node3D" parent="."]
 
 [node name="PlayerCharacter" parent="Global" instance=ExtResource("1_uwrxv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.67, 1.645)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.159, 7.143)
 
 [node name="Camera3D" type="Camera3D" parent="Global/PlayerCharacter"]
 transform = Transform3D(-4.371139e-08, 0.40673664, -0.9135454, 0, 0.9135454, 0.40673664, 1, 1.7779023e-08, -3.993234e-08, -6.187, 3.04, 0)
@@ -72,6 +73,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17)
 
 [node name="Module4" parent="Level" instance=ExtResource("5_p57ef")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
+
+[node name="DeathArea" parent="Level" instance=ExtResource("5_gee14")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 5.529437)
+scale_area = Vector3(1, 1, 50)
+debug = true
 
 [node name="Lighting" type="Node3D" parent="."]
 
