@@ -1,15 +1,17 @@
-[gd_scene load_steps=14 format=4 uid="uid://cldisfq822ewp"]
+[gd_scene load_steps=16 format=4 uid="uid://cldisfq822ewp"]
 
 [ext_resource type="PackedScene" uid="uid://ds25afo5ad7we" path="res://contents/prefabs/player_character.tscn" id="1_uwrxv"]
-[ext_resource type="Script" uid="uid://b6oclbh8yguum" path="res://scripts/game_manager.gd" id="2_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://cecleonog2yh0" path="res://contents/prefabs/game_manager.tscn" id="2_vtaks"]
 [ext_resource type="Environment" uid="uid://co8c3kh3eg1uq" path="res://contents/environments/default_environment.tres" id="2_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://dtvr13n5ht3tp" path="res://contents/prefabs/module_1.tscn" id="3_lnu2h"]
-[ext_resource type="PackedScene" uid="uid://bhlpsk7oikd7y" path="res://contents/prefabs/module_3.tscn" id="4_iywne"]
+[ext_resource type="PackedScene" uid="uid://dtvr13n5ht3tp" path="res://contents/prefabs/modules/module_1.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://bhlpsk7oikd7y" path="res://contents/prefabs/modules/module_3.tscn" id="4_iywne"]
+[ext_resource type="PackedScene" uid="uid://cfaslp4gqsivn" path="res://contents/prefabs/creature_dino.tscn" id="4_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://d2erhnolprkba" path="res://contents/prefabs/death_area.tscn" id="5_gee14"]
-[ext_resource type="PackedScene" uid="uid://bm411dicxfoyw" path="res://contents/prefabs/module_2.tscn" id="5_p57ef"]
+[ext_resource type="PackedScene" uid="uid://bm411dicxfoyw" path="res://contents/prefabs/modules/module_2.tscn" id="5_p57ef"]
 [ext_resource type="PackedScene" uid="uid://cx05w6qokm76s" path="res://contents/model3d/geo_cliff.glb" id="5_u5sy4"]
-[ext_resource type="PackedScene" uid="uid://ccrc7jg37fxou" path="res://contents/prefabs/ui/ui_menu_death.tscn" id="6_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://dsvp4xhve02nk" path="res://contents/prefabs/modules/module_4.tscn" id="6_dinhu"]
 [ext_resource type="Material" uid="uid://c7sym6kjk8cft" path="res://contents/materials/material_gray.tres" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://dq8gmo5mfxfh" path="res://contents/prefabs/end_plateform.tscn" id="8_kvpfn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2gkuc"]
 
@@ -54,10 +56,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.159, 7.143)
 [node name="Camera3D" type="Camera3D" parent="Global/PlayerCharacter"]
 transform = Transform3D(-4.371139e-08, 0.40673664, -0.9135454, 0, 0.9135454, 0.40673664, 1, 1.7779023e-08, -3.993234e-08, -6.187, 3.04, 0)
 
-[node name="GameManager" type="Node" parent="Global" node_paths=PackedStringArray("death_area")]
-script = ExtResource("2_0tnpc")
+[node name="GameManager" parent="Global" node_paths=PackedStringArray("death_area") instance=ExtResource("2_vtaks")]
 death_area = NodePath("../../Level/DeathArea")
-game_ui_death_prefab = ExtResource("6_0tnpc")
 
 [node name="Level" type="Node3D" parent="."]
 
@@ -75,16 +75,41 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
 [node name="Module5" parent="Level" instance=ExtResource("3_lnu2h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14)
 
+[node name="Module8" parent="Level" instance=ExtResource("3_lnu2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18)
+
+[node name="Module9" parent="Level" instance=ExtResource("3_lnu2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 22)
+
 [node name="Module3" parent="Level" instance=ExtResource("4_iywne")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25)
 
 [node name="Module4" parent="Level" instance=ExtResource("5_p57ef")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
 
+[node name="Module10" parent="Level" instance=ExtResource("6_dinhu")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8.742278e-08, 1, -10)
+
 [node name="DeathArea" parent="Level" instance=ExtResource("5_gee14")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 5.529437)
-scale_area = Vector3(1, 1, 50)
+scale_area = Vector3(1, 1, 59.35)
 debug = true
+
+[node name="CreatureDino" parent="Level" instance=ExtResource("4_kvpfn")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.19223076, 0.41534233, 16.64544)
+speed = -1.0
+
+[node name="EndPlateform" parent="Level" instance=ExtResource("8_kvpfn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4335855e-05, 1, 10.243646)
+
+[node name="EndPlateform2" parent="Level" instance=ExtResource("8_kvpfn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4335855e-05, 1, -9.2567215)
+
+[node name="EndPlateform3" parent="Level" instance=ExtResource("8_kvpfn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4335855e-05, 1, 13.778401)
+
+[node name="EndPlateform4" parent="Level" instance=ExtResource("8_kvpfn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4335855e-05, 1, 27.222658)
 
 [node name="Lighting" type="Node3D" parent="."]
 
