@@ -1,3 +1,4 @@
+class_name PlayerCharacter 
 extends CharacterBody3D
 
 @export var speed:float = 10
