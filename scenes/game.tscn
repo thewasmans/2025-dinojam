@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://cldisfq822ewp"]
+[gd_scene load_steps=17 format=4 uid="uid://cldisfq822ewp"]
 
 [ext_resource type="PackedScene" uid="uid://ds25afo5ad7we" path="res://contents/prefabs/player_character.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://cecleonog2yh0" path="res://contents/prefabs/game_manager.tscn" id="2_vtaks"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dsvp4xhve02nk" path="res://contents/prefabs/modules/module_4.tscn" id="6_dinhu"]
 [ext_resource type="Material" uid="uid://c7sym6kjk8cft" path="res://contents/materials/material_gray.tres" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dq8gmo5mfxfh" path="res://contents/prefabs/end_plateform.tscn" id="8_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://b6c7psihwyajx" path="res://contents/prefabs/modules/module_6.tscn" id="13_kvuet"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2gkuc"]
 
@@ -155,5 +156,8 @@ skeleton = NodePath("")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
 environment = ExtResource("2_yqjtg")
+
+[node name="Module1" parent="." instance=ExtResource("13_kvuet")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -3.059797e-06, -1.1077127, 65)
 
 [editable path="Environment/untitled2"]
