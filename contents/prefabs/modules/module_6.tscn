@@ -1,0 +1,90 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6c7psihwyajx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y0s1y"]
+size = Vector3(15, 1, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_y0s1y"]
+size = Vector3(15, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tn7t5"]
+size = Vector3(3, 3, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nn2cb"]
+size = Vector3(3, 3, 1)
+
+[node name="Module1" type="Node3D"]
+
+[node name="BlockGround" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BlockGround"]
+shape = SubResource("BoxShape3D_y0s1y")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BlockGround"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, 0)
+mesh = SubResource("BoxMesh_y0s1y")
+
+[node name="BlockGround2" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.934025e-07, -1, -9)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BlockGround2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_tn7t5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BlockGround2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3, 0, 1.2980239, 0)
+mesh = SubResource("BoxMesh_nn2cb")
+
+[node name="BlockGround3" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5.2453663e-07, -1, -12)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BlockGround3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_tn7t5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BlockGround3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3, 0, 1.2980239, 0)
+mesh = SubResource("BoxMesh_nn2cb")
+
+[node name="BlockGround4" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.5567076e-07, 1, -15)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BlockGround4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_tn7t5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BlockGround4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3, 0, 1.2980239, 0)
+mesh = SubResource("BoxMesh_nn2cb")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="BlockGround4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3, -2.8, 1.2980239, 0)
+mesh = SubResource("BoxMesh_nn2cb")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="BlockGround4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3, 0, 10.619423, 0)
+mesh = SubResource("BoxMesh_nn2cb")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="BlockGround4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3, 3, 10.619423, 0)
+mesh = SubResource("BoxMesh_nn2cb")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="BlockGround4"]
+transform = Transform3D(2.5468857, 0.47430333, 0, -1.3721595, 0.8803615, 0, 0, 0, 3, 8.579347, 8.538806, 3.2640557e-14)
+mesh = SubResource("BoxMesh_nn2cb")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="BlockGround4"]
+transform = Transform3D(1.453, 0, 0, 0, 1.875, 0, 0, 0, 3, 13.535156, 7.8819714, 4.3298698e-14)
+mesh = SubResource("BoxMesh_nn2cb")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="BlockGround4"]
+transform = Transform3D(1.203811, 1.0499784, 0, -0.8136632, 1.5534382, 0, 0, 0, 3, 15.625678, 8.464874, 3.4107856e-08)
+mesh = SubResource("BoxMesh_nn2cb")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="BlockGround4"]
+transform = Transform3D(-0.9693787, 1.3967199, 0, -1.0823649, -1.250919, 0, 0, 0, 3, 20.904375, 8.124579, 3.4107856e-08)
+mesh = SubResource("BoxMesh_nn2cb")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="BlockGround4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3, -2.8, 10.619423, 0)
+mesh = SubResource("BoxMesh_nn2cb")
